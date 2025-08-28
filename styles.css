@@ -1,0 +1,282 @@
+
+/* CSS RESETS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ROOT */
+
+:root {
+
+    /* COLORS LIGHT MODE */
+    --white: #fff;
+    --black: #000;
+    --white-smoke: #F5F5F5;
+    --eerie-black: #1F1F1F;
+    --jet: #333333;
+
+
+
+    /* FONT SIZES */
+    --font-size-n: 1rem;
+    --font-size-m: 1.125rem;
+    --font-size-l: 2rem;
+    --font-size-xl: 3.635rem;
+    --font-size-xxl: 4.24rem;
+
+    /* BORDER RADIUS */
+    --border-radius-s: 8px;
+    --border-radius-m: 20px;
+    --border-radius-l: 32px;
+    --border-radius-circle: 50%;
+
+    /* SITE MAX WIDTH */
+    --site-max-width: 1240px;
+    
+}
+
+
+/* GENERAL CSS */
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100%;
+    background-color: var(--white-smoke)
+}
+
+/* Body dark mode */
+
+body.dark-mode {
+    background-color: var(--black)
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+ 
+
+/* IMAGES */
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* LINKS */
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* SITE WIDE*/
+
+/* Main container light mode */
+.main-container {
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+    padding: 20px 40px;
+    background-color: var(--white);
+}
+
+/* Main container dark mode */
+.main-container.dark-mode {
+    background-color: var(--eerie-black);
+    color: var(--white);
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0px;
+
+} 
+
+/* H1 light mode */
+h1 {
+    padding-bottom: 10px;
+    font-size: var(--font-size-xxl);
+    text-align: center;
+    color: var(--black);
+}
+
+/* H1 dark mode */
+
+h1.dark-mode {
+    color: var(--white);
+}
+
+/* Subheading light mode */
+.subheading {
+    padding-top: 10px;
+    padding-bottom: 40px;
+    font-size: var(--font-size-m);
+    color: var(--black);
+}
+
+/* Subheading dark mode */
+.subheading.dark-mode {
+    color: var(--white);
+}
+
+
+/* Button light mode */
+ button {
+    padding: 8px 24px;
+    font-size: var(--font-size-m);
+    border-radius: var(--border-radius-s);
+    background-color: var(--black);
+    color: var(--white);
+    margin-bottom: 20px;
+ }
+
+ /* Button dark mode */
+
+ button.dark-mode {
+    background-color: var(--white);
+    color: var(--black);
+ }
+
+
+/* BLOG ARTICLES*/
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 300px;
+    gap: 10px;
+    padding-bottom: 40px;
+
+} 
+
+/* Blog block light mode */
+.blog-block {
+    border-radius: var(--border-radius-s);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.blog-block1 {
+    background-color: var(--white-smoke);
+    border: 1px solid var(--black);
+}
+
+.blog-block2 {
+    background-color: var(--white-smoke);
+    border: 1px solid var(--black);
+}
+
+.blog-block3 {
+    background-color: var(--white-smoke);
+    border: 1px solid var(--black);
+}
+
+.blog-block4 {
+    background-color: var(--white-smoke);
+    border: 1px solid var(--black);
+}
+
+.blog-block5 {
+    background-color: var(--white-smoke);
+    border: 1px solid var(--black);
+}
+
+.blog-block6 {
+    background-color: var(--white-smoke);
+    border: 1px solid var(--black);
+}
+
+/* Blog block dark mode */
+
+.blog-block1.dark-mode {
+    border: 1px solid var(--white);
+    background-color: var(--jet);
+} 
+
+.blog-block2.dark-mode {
+    border: 1px solid var(--white);
+    background-color: var(--jet);
+} 
+
+.blog-block3.dark-mode {
+    border: 1px solid var(--white);
+    background-color: var(--jet);
+} 
+
+.blog-block4.dark-mode {
+    border: 1px solid var(--white);
+    background-color: var(--jet);
+} 
+
+.blog-block5.dark-mode {
+    border: 1px solid var(--white);
+    background-color: var(--jet);
+} 
+
+.blog-block6.dark-mode {
+    border: 1px solid var(--white);
+    background-color: var(--jet);
+} 
+
+
+
+.blog-block p {
+    font-size: var(--font-size-l);
+}
+
+
+
+/* RESPONSIVE */
+
+       
+/* (TABLET) RESPONSIVE BELOW FOR MAX WIDTH 1000PX */
+@media screen and (max-width: 1000px) {
+
+main {
+    grid-template-columns: 1fr 1fr;
+
+} 
+
+}
+
+       
+/* (MOBILE) RESPONSIVE BELOW FOR MAX WIDTH 600PX */
+
+@media screen and (max-width: 600px) {
+
+:root {
+
+    /* FONT SIZES */
+
+    --font-size-m: 1rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2.5rem;
+    --font-size-xxl: 3rem;
+}
+
+main {
+    grid-template-columns: 1fr;
+
+} 
+
+    
+}
+
+
+
